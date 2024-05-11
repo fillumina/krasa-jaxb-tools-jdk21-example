@@ -1,0 +1,8 @@
+/krasa-common/target/
+/krasa-cxf-xjc-plugin-example/target/
+/krasa-maven-jaxb2-plugin-example/target/
+/krasa-cxf-codegen-plugin-example/target/
+/krasa-cxf-codegen-plugin-example/nb-configuration.xml
+/krasa-cxf-xjc-plugin-example/nb-configuration.xml
+/nb-configuration.xml
+/krasa-maven-jaxb2-plugin-example/src/generated/

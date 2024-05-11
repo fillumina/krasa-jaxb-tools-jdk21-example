@@ -4,21 +4,22 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.github.krasa</groupId>
+	<groupId>com.fillumina</groupId>
 	<artifactId>krasa-jaxb-tools-example</artifactId>
-	<version>0.5-SNAPSHOT</version>
-	<modules>
-		<module>cxf-xjc-plugin</module>
-		<module>cxf-codegen-plugin</module>
-		<module>maven-jaxb2-plugin</module>
-		<module>common</module>
-	</modules>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
+
+  <modules>
+		<module>krasa-common</module>
+		<module>krasa-maven-jaxb2-plugin-example</module>
+		<module>krasa-cxf-xjc-plugin-example</module>
+		<module>krasa-cxf-codegen-plugin-example</module>
+	</modules>
 
 	<properties>
 		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
-		<krasa-jaxb-tools.version>1.8-SNAPSHOT</krasa-jaxb-tools.version>
-		<krasa-jaxb-tools-example.version>0.5-SNAPSHOT</krasa-jaxb-tools-example.version>
+		<krasa-jaxb-tools.version>2.3-SNAPSHOT</krasa-jaxb-tools.version>
+		<krasa-jaxb-tools-example.version>1.0-SNAPSHOT</krasa-jaxb-tools-example.version>
 
 		<jaxb2-basics.version>0.9.3</jaxb2-basics.version>
 		<jaxb2-basics-runtime.version>0.9.3</jaxb2-basics-runtime.version>
@@ -29,10 +30,11 @@
 		<validation-api.version>1.0.0.GA</validation-api.version>
 		<hibernate-validator.version>4.2.0.Final</hibernate-validator.version>
 
-		<cxf-codegen-plugin.version>2.7.3</cxf-codegen-plugin.version>
+		<cxf-codegen-plugin.version>3.5.3</cxf-codegen-plugin.version>
 		<jaxb2-maven-plugin.version>1.6</jaxb2-maven-plugin.version>
 		<build-helper-maven-plugin.version>1.9.1</build-helper-maven-plugin.version>
 	</properties>
+
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
 		<dependency>
@@ -52,6 +54,7 @@
 			<artifactId>validation-api</artifactId>
 			<version>${validation-api.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -75,6 +78,7 @@
 		</plugins>
 	</build>
 
+  <!--
 	<repositories>
 		<repository>
 			<id>snapshots-repo</id>
@@ -99,6 +103,5 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-
-
+  -->
 </project>
