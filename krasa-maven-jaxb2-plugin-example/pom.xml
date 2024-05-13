@@ -26,6 +26,7 @@
 				<directory>${project.basedir}/src/generated</directory>
 			</resource>
 		</resources>
+
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -46,6 +47,7 @@
 					</execution>
 				</executions>
 			</plugin>
+
 			<plugin>
 				<groupId>org.jvnet.jaxb2.maven2</groupId>
 				<artifactId>maven-jaxb2-plugin</artifactId>
@@ -56,21 +58,8 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<generateDirectory>${project.basedir}/src/generated</generateDirectory>
-							<forceRegenerate>true</forceRegenerate>
-							<schemas>
-								<schema>
-									<fileset>
-										<directory>${project.parent.basedir}/wsdl</directory>
-										<includes>
-											<include>*.*</include>
-										</includes>
-										<excludes>
-											<exclude>*.xs</exclude>
-										</excludes>
-									</fileset>
-								</schema>
-							</schemas>
+              <schemaLanguage>wsdl</schemaLanguage>
+              <schemaFiles>${project.parent.basedir}/wsdl/Hello.wsdl</schemaFiles>
 							<extension>true</extension>
 							<args>
 								<arg>-no-header</arg>
@@ -88,13 +77,22 @@
 								<plugin>
 									<groupId>org.jvnet.jaxb2_commons</groupId>
 									<artifactId>jaxb2-basics</artifactId>
-									<version>${jaxb2-basics.version}</version>
+									<version>1.11.1</version>
 								</plugin>
 							</plugins>
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
+		 <plugin>
+		  <groupId>org.apache.maven.plugins</groupId>
+		  <artifactId>maven-compiler-plugin</artifactId>
+		  <version>3.13.0</version>
+		  <configuration>
+		   <source>1.8</source>
+		   <target>1.8</target>
+		  </configuration>
+		 </plugin>
 		</plugins>
 
 	</build>

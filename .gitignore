@@ -6,3 +6,4 @@
 /krasa-cxf-xjc-plugin-example/nb-configuration.xml
 /nb-configuration.xml
 /krasa-maven-jaxb2-plugin-example/src/generated/
+/krasa-jaxb2-maven-plugin-example/target/
