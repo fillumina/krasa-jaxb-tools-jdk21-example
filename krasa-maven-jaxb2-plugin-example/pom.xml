@@ -52,7 +52,7 @@
               <extension>true</extension>
               <args>
                 <arg>-wsdl</arg>
-                <arg>-verbose</arg>
+                <!--<arg>-verbose</arg>-->
                 <arg>-no-header</arg>
                 <arg>-XJsr303Annotations</arg>
                 <arg>-XJsr303Annotations:targetNamespace=a</arg>
