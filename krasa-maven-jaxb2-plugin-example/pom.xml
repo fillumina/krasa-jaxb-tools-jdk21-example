@@ -17,6 +17,7 @@
       <groupId>com.fillumina</groupId>
       <artifactId>krasa-common</artifactId>
       <version>${krasa-jaxb-tools-example.version}</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>javax.el</groupId>
@@ -67,7 +68,7 @@
                 <plugin>
                   <groupId>org.jvnet.jaxb2_commons</groupId>
                   <artifactId>jaxb2-basics</artifactId>
-                  <version>1.11.1</version>
+                  <version>${jaxb2-basics.version}</version>
                 </plugin>
               </plugins>
             </configuration>
