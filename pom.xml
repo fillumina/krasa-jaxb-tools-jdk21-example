@@ -6,7 +6,7 @@
 
 	<groupId>com.fillumina</groupId>
 	<artifactId>krasa-jaxb-tools-example</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>2.3-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
   <modules>
@@ -17,20 +17,18 @@
 	</modules>
 
 	<properties>
-		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
-		<krasa-jaxb-tools.version>2.3-SNAPSHOT</krasa-jaxb-tools.version>
-		<krasa-jaxb-tools-example.version>1.0-SNAPSHOT</krasa-jaxb-tools-example.version>
-
-		<jaxb2-basics.version>0.9.3</jaxb2-basics.version>
-		<jaxb2-basics-runtime.version>0.9.3</jaxb2-basics-runtime.version>
-
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven-jaxb2-plugin.version>0.15.3</maven-jaxb2-plugin.version>
-		<jaxb.version>2.2.6</jaxb.version>
-		<validation-api.version>1.0.0.GA</validation-api.version>
-		<hibernate-validator.version>4.2.0.Final</hibernate-validator.version>
 
-		<cxf-codegen-plugin.version>3.5.8</cxf-codegen-plugin.version>
+    <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+		<krasa-jaxb-tools.version>2.3-SNAPSHOT</krasa-jaxb-tools.version>
+		<krasa-jaxb-tools-example.version>2.3-SNAPSHOT</krasa-jaxb-tools-example.version>
+
+		<jaxb2-basics.version>1.11.1</jaxb2-basics.version>
+		<maven-jaxb2-plugin.version>0.15.3</maven-jaxb2-plugin.version>
+		<validation-api.version>2.0.1.Final</validation-api.version>
+		<hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
+
+		<cxf-codegen-plugin.version>3.2.4</cxf-codegen-plugin.version>
 		<jaxb2-maven-plugin.version>1.6</jaxb2-maven-plugin.version>
 		<build-helper-maven-plugin.version>1.9.1</build-helper-maven-plugin.version>
 	</properties>
@@ -46,7 +44,7 @@
 		<dependency>
 			<groupId>org.jvnet.jaxb2_commons</groupId>
 			<artifactId>jaxb2-basics-runtime</artifactId>
-			<version>${jaxb2-basics-runtime.version}</version>
+			<version>${jaxb2-basics.version}</version>
 		</dependency>
 
 		<dependency>
@@ -58,7 +56,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
 
