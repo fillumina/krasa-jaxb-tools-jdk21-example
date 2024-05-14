@@ -1,3 +1,5 @@
+package com.fillumina.krasa.jaxbtoolsexample.jaxb2;
+
 import a.Primitives;
 
 public class PrimitivesTest {

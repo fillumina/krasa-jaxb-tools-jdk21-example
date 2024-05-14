@@ -16,7 +16,7 @@
     <dependency>
       <groupId>com.fillumina</groupId>
       <artifactId>krasa-common</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <version>${krasa-jaxb-tools-example.version}</version>
       <scope>test</scope>
     </dependency>
 

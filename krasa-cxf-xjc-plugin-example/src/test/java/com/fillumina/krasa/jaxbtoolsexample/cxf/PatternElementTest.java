@@ -1,12 +1,14 @@
-package com.fillumina.krasa.jaxbtoolsexample.test;
+package com.fillumina.krasa.jaxbtoolsexample.cxf;
 
+import a.PatternElement;
+import com.fillumina.krasa.jaxbtoolsexample.test.BeanValidationHelper;
 import org.junit.Test;
 
 /**
  *
  * @author Francesco Illuminati <fillumina@gmail.com>
  */
-public class BeanTest extends BeanValidationHelper {
+public class PatternElementTest extends BeanValidationHelper {
 
     @Test
     public void shouldPassValidation() {
