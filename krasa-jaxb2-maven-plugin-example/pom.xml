@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.fillumina</groupId>
+    <artifactId>krasa-jaxb-tools-example</artifactId>
+    <version>2.4-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>krasa-jaxb2-maven-plugin-example</artifactId>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.fillumina</groupId>
+      <artifactId>krasa-common</artifactId>
+      <version>${krasa-jaxb-tools-example.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.validation</groupId>
+      <artifactId>validation-api</artifactId>
+      <version>2.0.1.Final</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jaxb2-maven-plugin</artifactId>
+        <version>3.2.0</version>
+        <dependencies>
+          <dependency>
+            <groupId>com.fillumina</groupId>
+            <artifactId>krasa-jaxb-tools</artifactId>
+            <version>2.3</version>
+          </dependency>
+        </dependencies>
+        <executions>
+          <execution>
+            <id>xjc-schema-a</id>
+            <goals>
+              <goal>xjc</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <!--<source>${project.parent.basedir}/schema/a.xsd</source>-->
+                <source>/media/lindata/Code/Java/Utils/Krasa/krasa-jaxb-tools-example/schema/a.xsd</source>
+              </sources>
+              <packageName>a</packageName>
+              <arguments>
+                <argument>-XJsr303Annotations</argument>
+                <argument>-XJsr303Annotations:JSR_349=true</argument>
+                <argument>-XJsr303Annotations:verbose=false</argument>
+                <argument>-XJsr303Annotations:validationAnnotations=javax</argument>
+                <argument>-XJsr303Annotations:generateNotNullAnnotations=true</argument>
+              </arguments>
+              <plugins>
+                <plugin>
+                  <groupId>com.fillumina</groupId>
+                  <artifactId>krasa-jaxb-tools</artifactId>
+                  <version>${krasa-jaxb-tools.version}</version>
+                </plugin>
+                <plugin>
+                  <groupId>org.jvnet.jaxb2_commons</groupId>
+                  <artifactId>jaxb2-basics</artifactId>
+                  <version>${jaxb2-basics.version}</version>
+                </plugin>
+              </plugins>
+            </configuration>
+          </execution>
+          <execution>
+            <id>xjc-schema-b</id>
+            <goals>
+              <goal>xjc</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <!--<source>${project.parent.basedir}/schema/a.xsd</source>-->
+                <source>/media/lindata/Code/Java/Utils/Krasa/krasa-jaxb-tools-example/schema/b.xsd</source>
+              </sources>
+              <packageName>b</packageName>
+              <arguments>
+                <argument>-XJsr303Annotations</argument>
+                <argument>-XJsr303Annotations:JSR_349=true</argument>
+                <argument>-XJsr303Annotations:verbose=false</argument>
+                <argument>-XJsr303Annotations:validationAnnotations=javax</argument>
+                <argument>-XJsr303Annotations:generateNotNullAnnotations=true</argument>
+              </arguments>
+              <!--
+                  Don't clear the output directory before generating the sources.
+                  Clearing the output directory removes the se.west schema from above.
+              -->
+              <clearOutputDir>false</clearOutputDir>
+              <plugins>
+                <plugin>
+                  <groupId>com.fillumina</groupId>
+                  <artifactId>krasa-jaxb-tools</artifactId>
+                  <version>${krasa-jaxb-tools.version}</version>
+                </plugin>
+                <plugin>
+                  <groupId>org.jvnet.jaxb2_commons</groupId>
+                  <artifactId>jaxb2-basics</artifactId>
+                  <version>${jaxb2-basics.version}</version>
+                </plugin>
+              </plugins>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+
+  </build>
+  <name>krasa-jaxb2-maven-plugin-example</name>
+</project>

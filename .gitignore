@@ -8,3 +8,5 @@
 /krasa-maven-jaxb2-plugin-example/src/generated/
 /krasa-jaxb2-maven-plugin-example/target/
 /krasa-common/nbproject/
+/krasa-jaxb2-maven-plugin-example/nbproject/
+/krasa-jaxb2-maven-plugin-example/nb-configuration.xml

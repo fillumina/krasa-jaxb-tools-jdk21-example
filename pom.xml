@@ -14,6 +14,7 @@
 		<module>krasa-maven-jaxb2-plugin-example</module>
 		<module>krasa-cxf-xjc-plugin-example</module>
 		<module>krasa-cxf-codegen-plugin-example</module>
+    <module>krasa-jaxb2-maven-plugin-example</module>
 	</modules>
 
 	<properties>
