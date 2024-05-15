@@ -6,7 +6,7 @@
 
 	<groupId>com.fillumina</groupId>
 	<artifactId>krasa-jaxb-tools-example</artifactId>
-	<version>2.3</version>
+	<version>2.4-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
   <modules>
@@ -20,8 +20,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
-		<krasa-jaxb-tools.version>2.3</krasa-jaxb-tools.version>
-		<krasa-jaxb-tools-example.version>2.3</krasa-jaxb-tools-example.version>
+		<krasa-jaxb-tools.version>2.4-SNAPSHOT</krasa-jaxb-tools.version>
+		<krasa-jaxb-tools-example.version>2.4-SNAPSHOT</krasa-jaxb-tools-example.version>
 
 		<jaxb2-basics.version>1.11.1</jaxb2-basics.version>
 		<maven-jaxb2-plugin.version>0.15.3</maven-jaxb2-plugin.version>
