@@ -1,70 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.fillumina</groupId>
-	<artifactId>krasa-jaxb-tools-example</artifactId>
-	<version>2.4-SNAPSHOT</version>
-	<packaging>pom</packaging>
+  <groupId>com.fillumina</groupId>
+  <artifactId>krasa-jaxb-tools-example</artifactId>
+  <version>2.4-SNAPSHOT</version>
+  <packaging>pom</packaging>
 
   <modules>
-		<module>krasa-common</module>
-		<module>krasa-maven-jaxb2-plugin-example</module>
-		<module>krasa-cxf-xjc-plugin-example</module>
-		<module>krasa-cxf-codegen-plugin-example</module>
+    <module>krasa-common</module>
+    <module>krasa-maven-jaxb2-plugin-example</module>
+    <module>krasa-cxf-xjc-plugin-example</module>
+    <module>krasa-cxf-codegen-plugin-example</module>
     <module>krasa-jaxb2-maven-plugin-example</module>
-	</modules>
+  </modules>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
-		<krasa-jaxb-tools.version>2.4-SNAPSHOT</krasa-jaxb-tools.version>
-		<krasa-jaxb-tools-example.version>2.4-SNAPSHOT</krasa-jaxb-tools-example.version>
+    <krasa-jaxb-tools.version>2.4-SNAPSHOT</krasa-jaxb-tools.version>
+    <krasa-jaxb-tools-example.version>2.4-SNAPSHOT</krasa-jaxb-tools-example.version>
 
-		<jaxb2-basics.version>1.11.1</jaxb2-basics.version>
-		<maven-jaxb2-plugin.version>0.15.3</maven-jaxb2-plugin.version>
-		<validation-api.version>2.0.1.Final</validation-api.version>
-		<hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
+    <jaxb2-basics.version>1.11.1</jaxb2-basics.version>
+    <maven-jaxb2-plugin.version>0.15.3</maven-jaxb2-plugin.version>
+    <validation-api.version>2.0.1.Final</validation-api.version>
+    <hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
 
-		<cxf-codegen-plugin.version>3.2.4</cxf-codegen-plugin.version>
-		<jaxb2-maven-plugin.version>1.6</jaxb2-maven-plugin.version>
-		<build-helper-maven-plugin.version>1.9.1</build-helper-maven-plugin.version>
-	</properties>
+    <cxf-codegen-plugin.version>3.2.4</cxf-codegen-plugin.version>
+    <jaxb2-maven-plugin.version>1.6</jaxb2-maven-plugin.version>
+    <build-helper-maven-plugin.version>1.9.1</build-helper-maven-plugin.version>
+  </properties>
 
-	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>${hibernate-validator.version}</version>
-		</dependency>
+  <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>${hibernate-validator.version}</version>
+    </dependency>
 
-		<dependency>
-			<groupId>org.jvnet.jaxb2_commons</groupId>
-			<artifactId>jaxb2-basics-runtime</artifactId>
-			<version>${jaxb2-basics.version}</version>
-		</dependency>
+    <dependency>
+      <groupId>org.jvnet.jaxb2_commons</groupId>
+      <artifactId>jaxb2-basics-runtime</artifactId>
+      <version>${jaxb2-basics.version}</version>
+    </dependency>
 
-		<dependency>
-			<groupId>javax.validation</groupId>
-			<artifactId>validation-api</artifactId>
-			<version>${validation-api.version}</version>
-		</dependency>
+    <dependency>
+      <groupId>javax.validation</groupId>
+      <artifactId>validation-api</artifactId>
+      <version>${validation-api.version}</version>
+    </dependency>
 
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.13.2</version>
-			<scope>test</scope>
-		</dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
 
-	</dependencies>
-	<build>
+  </dependencies>
+  <build>
 
-		<plugins>
+    <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
@@ -86,15 +86,15 @@
         </executions>
       </plugin>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>${maven-compiler-plugin.version}</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven-compiler-plugin.version}</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

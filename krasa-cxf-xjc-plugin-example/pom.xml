@@ -60,7 +60,6 @@
                 <extensionArg>-XJsr303Annotations</extensionArg>
                 <extensionArg>-XJsr303Annotations:targetNamespace=a</extensionArg>
                 <extensionArg>-XJsr303Annotations:generateNotNullAnnotations=true</extensionArg>
-                <extensionArg>-XJsr303Annotations:JSR_349=false</extensionArg>
                 <extensionArg>-no-header</extensionArg>
               </extensionArgs>
             </xsdOption>
@@ -74,7 +73,6 @@
                 <extensionArg>-XJsr303Annotations</extensionArg>
                 <extensionArg>-XJsr303Annotations:targetNamespace=b</extensionArg>
                 <extensionArg>-XJsr303Annotations:generateNotNullAnnotations=true</extensionArg>
-                <extensionArg>-XJsr303Annotations:JSR_349=false</extensionArg>
                 <extensionArg>-no-header</extensionArg>
               </extensionArgs>
             </xsdOption>

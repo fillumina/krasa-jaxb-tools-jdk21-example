@@ -51,7 +51,6 @@
               <packageName>a</packageName>
               <arguments>
                 <argument>-XJsr303Annotations</argument>
-                <argument>-XJsr303Annotations:JSR_349=true</argument>
                 <argument>-XJsr303Annotations:verbose=false</argument>
                 <argument>-XJsr303Annotations:validationAnnotations=javax</argument>
                 <argument>-XJsr303Annotations:generateNotNullAnnotations=true</argument>
@@ -82,7 +81,6 @@
               <packageName>b</packageName>
               <arguments>
                 <argument>-XJsr303Annotations</argument>
-                <argument>-XJsr303Annotations:JSR_349=true</argument>
                 <argument>-XJsr303Annotations:verbose=false</argument>
                 <argument>-XJsr303Annotations:validationAnnotations=javax</argument>
                 <argument>-XJsr303Annotations:generateNotNullAnnotations=true</argument>
