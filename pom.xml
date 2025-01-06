@@ -5,96 +5,41 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.fillumina</groupId>
-  <artifactId>krasa-jaxb-tools-example</artifactId>
+  <artifactId>krasa-jaxb-tools-jdk21-example</artifactId>
   <version>2.4-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
-    <module>krasa-common</module>
-    <module>krasa-maven-jaxb2-plugin-example</module>
-    <module>krasa-cxf-xjc-plugin-example</module>
-    <module>krasa-cxf-codegen-plugin-example</module>
-    <module>krasa-jaxb2-maven-plugin-example</module>
+    <module>krasa-test-helper-javax-jdk21</module>
+    <module>krasa-test-helper-jakarta-jdk21</module>
+    <module>krasa-cxf-codegen-plugin-javax-jdk21-example</module>
+    <module>krasa-cxf-codegen-plugin-jakarta-jdk21-example</module>
+    <module>krasa-cxf-xjc-plugin-javax-jdk21-example</module>
+    <module>krasa-cxf-xjc-plugin-jakarta-jdk21-example</module>
+    <module>krasa-maven-jaxb2-plugin-javax-jdk21-example</module>
+    <module>krasa-maven-jaxb2-plugin-jakarta-jdk21-example</module>
+    <module>krasa-jaxb2-maven-plugin-javax-jdk21-example</module>
+    <module>krasa-jaxb2-maven-plugin-jakarta-jdk21-example</module>
   </modules>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-    <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
     <krasa-jaxb-tools.version>2.4-SNAPSHOT</krasa-jaxb-tools.version>
-    <krasa-jaxb-tools-example.version>2.4-SNAPSHOT</krasa-jaxb-tools-example.version>
-
-    <jaxb2-basics.version>1.11.1</jaxb2-basics.version>
-    <maven-jaxb2-plugin.version>0.15.3</maven-jaxb2-plugin.version>
-    <validation-api.version>2.0.1.Final</validation-api.version>
-    <hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
-
-    <cxf-codegen-plugin.version>3.2.4</cxf-codegen-plugin.version>
-    <jaxb2-maven-plugin.version>1.6</jaxb2-maven-plugin.version>
-    <build-helper-maven-plugin.version>1.9.1</build-helper-maven-plugin.version>
   </properties>
 
-  <dependencies>
-    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-validator</artifactId>
-      <version>${hibernate-validator.version}</version>
-    </dependency>
+  <!-- TODO inssert check for JDK 21 here -->
 
-    <dependency>
-      <groupId>org.jvnet.jaxb2_commons</groupId>
-      <artifactId>jaxb2-basics-runtime</artifactId>
-      <version>${jaxb2-basics.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>javax.validation</groupId>
-      <artifactId>validation-api</artifactId>
-      <version>${validation-api.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13.2</version>
-      <scope>test</scope>
-    </dependency>
-
-  </dependencies>
   <build>
-
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <version>1.4.1</version>
-        <executions>
-          <execution>
-            <id>enforce-versions</id>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <rules>
-                <requireJavaVersion>
-                  <version>1.8</version>
-                </requireJavaVersion>
-              </rules>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>${maven-compiler-plugin.version}</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
-      </plugin>
-    </plugins>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.13.0</version>
+          <configuration>
+            <source>21</source>
+            <target>21</target>
+          </configuration>
+        </plugin>
+      </plugins>
   </build>
 </project>

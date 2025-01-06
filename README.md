@@ -13,3 +13,13 @@ Tests are performed with these plugins:
 - [`cxf-codegen-plugin`](https://cxf.apache.org/docs/maven-cxf-codegen-plugin-wsdl-to-java.html)
 
 - [`cxf-xjc-plugin`](https://cxf.apache.org/cxf-xjc-plugin.html)
+
+
+## TODO
+
+ - Set JDK 21 constraint on parent pom
+ - change package names
+ - comment on dependencies
+ - check for unused dependencies
+ - add meaningful README
+ - centralize krasa-jaxb version on parent (to easy ceck for different krasa versions)

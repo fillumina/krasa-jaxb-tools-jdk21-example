@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.fillumina</groupId>
+    <artifactId>krasa-jaxb-tools-jdk21-example</artifactId>
+    <version>2.4-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>krasa-cxf-codegen-plugin-jakarta-jdk21-example</artifactId>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.fillumina</groupId>
+      <artifactId>krasa-test-helper-jakarta-jdk21</artifactId>
+      <version>2.4-SNAPSHOT</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>jakarta.validation</groupId>
+      <artifactId>jakarta.validation-api</artifactId>
+      <version>3.0.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>8.0.2.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.xml.bind</groupId>
+      <artifactId>jakarta.xml.bind-api</artifactId>
+      <version>4.0.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish</groupId>
+      <artifactId>jakarta.el</artifactId>
+      <version>4.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.jws</groupId>
+      <artifactId>jakarta.jws-api</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-codegen-plugin</artifactId>
+        <version>4.1.0</version>
+        <executions>
+          <execution>
+            <id>wsdl2java</id>
+            <!--<phase>generate-sources-manual</phase>-->
+            <phase>generate-sources</phase>
+            <configuration>
+              <!--<sourceRoot>${project.basedir}/src/generated</sourceRoot>-->
+              <wsdlOptions>
+                <wsdlOption>
+                  <wsdl>${project.parent.basedir}/wsdl/Hello.wsdl</wsdl>
+                  <extraargs>
+                    <extraarg>-verbose</extraarg>
+                    <!-- enable the ValidSEIGenerator -->
+                    <extraarg>-frontend</extraarg>
+                    <extraarg>krasa</extraarg>
+                    <!--                    <extraarg>-b</extraarg>
+                    <extraarg>${project.parent.basedir}/wsdl/jaxws-Hello.xml</extraarg>-->
+                    <extraarg>-xjc-XJsr303Annotations:verbose=true</extraarg>
+                    <extraarg>-xjc-XReplacePrimitives</extraarg>
+                    <!--<extraarg>-xjc-XhashCode</extraarg>
+                    <extraarg>-xjc-Xequals</extraarg>-->
+                    <extraarg>-xjc-XJsr303Annotations</extraarg>
+                    <!-- parameter for the ValidSEIGenerator -->
+                    <extraarg>-xjc-XJsr303Annotations:generateServiceValidationAnnotations=InOut</extraarg>
+                    <extraarg>-xjc-XJsr303Annotations:targetNamespace=a</extraarg>
+                    <extraarg>-xjc-XJsr303Annotations:generateNotNullAnnotations=true</extraarg>
+                    <extraarg>-xjc-XJsr303Annotations:validationAnnotations=jakarta</extraarg>
+                  </extraargs>
+                </wsdlOption>
+              </wsdlOptions>
+            </configuration>
+            <goals>
+              <goal>wsdl2java</goal>
+            </goals>
+          </execution>
+        </executions>
+        <dependencies>
+          <!--          <dependency>
+            <groupId>org.jvnet.jaxb2_commons</groupId>
+            <artifactId>jaxb2-basics</artifactId>
+            <version>1.11.1</version>
+          </dependency>-->
+          <dependency>
+            <groupId>com.fillumina</groupId>
+            <artifactId>krasa-jaxb-tools</artifactId>
+            <version>2.4-SNAPSHOT</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+        <configuration>
+          <source>21</source>
+          <target>21</target>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+    <name>krasa-cxf-codegen-plugin-jakarta-jdk21-example</name>
+</project>
