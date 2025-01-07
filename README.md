@@ -23,3 +23,5 @@ Tests are performed with these plugins:
  - check for unused dependencies
  - add meaningful README
  - centralize krasa-jaxb version on parent (to easy ceck for different krasa versions)
+ - add jaxws-maven-plugin
+ - add test to check that packages a and b were both generated with the right classes

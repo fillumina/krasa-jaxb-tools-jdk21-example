@@ -1,0 +1,21 @@
+<jaxb:bindings
+  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  jaxb:version="3.0">
+
+  <!--
+      this is assign the right package when that is not possible via plugin configuration
+      i.e. with jaxb-maven-plugin
+  -->
+  <jaxb:bindings schemaLocation="a.xsd" node="/xsd:schema">
+    <jaxb:schemaBindings>
+      <jaxb:package name="a"/>
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+  <jaxb:bindings schemaLocation="b.xsd" node="/xsd:schema">
+    <jaxb:schemaBindings>
+      <jaxb:package name="b"/>
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+
+</jaxb:bindings>

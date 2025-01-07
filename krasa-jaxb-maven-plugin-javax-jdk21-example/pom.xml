@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -10,13 +8,13 @@
     <version>2.4-SNAPSHOT</version>
   </parent>
 
-  <artifactId>krasa-maven-jaxb2-plugin-javax-jdk21-example</artifactId>
+  <artifactId>krasa-jaxb-maven-plugin-javax-jdk21-example</artifactId>
 
   <dependencies>
     <dependency>
       <groupId>com.fillumina</groupId>
       <artifactId>krasa-test-helper-javax-jdk21</artifactId>
-      <version>2.4-SNAPSHOT</version>
+      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
 
@@ -37,15 +35,15 @@
       <version>2.2.6</version>
     </dependency>
 
+<!--    <dependency>
+      <groupId>jakarta.xml.bind</groupId>
+      <artifactId>jakarta.xml.bind-api</artifactId>
+      <version>4.0.2</version>
+    </dependency>-->
     <dependency>
-      <groupId>com.sun.xml.bind</groupId>
-      <artifactId>jaxb-impl</artifactId>
-      <version>2.3.4</version>
-    </dependency>
-    <dependency>
-      <groupId>org.jvnet.jaxb2_commons</groupId>
-      <artifactId>jaxb2-basics-runtime</artifactId>
-      <version>1.11.1</version>
+      <groupId>javax.xml.bind</groupId>
+      <artifactId>jaxb-api</artifactId>
+      <version>2.3.1</version>
     </dependency>
 
     <dependency>
@@ -54,42 +52,52 @@
       <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
-
+    <dependency>
+      <groupId>jakarta.validation</groupId>
+      <artifactId>jakarta.validation-api</artifactId>
+      <version>2.0.2</version>
+    </dependency>
   </dependencies>
 
   <build>
-
     <plugins>
       <plugin>
-        <groupId>org.jvnet.jaxb2.maven2</groupId>
-        <artifactId>maven-jaxb2-plugin</artifactId>
-        <version>0.15.3</version>
+        <!-- jaxb-maven-plugin, formerly jaxb2-maven-plugin -->
+        <!-- https://github.com/highsource/jaxb-tools -->
+        <groupId>org.jvnet.jaxb</groupId>
+        <artifactId>jaxb-maven-plugin</artifactId>
+        <!-- last version supporting javax -->
+        <version>2.0.14</version>
+        <dependencies>
+          <dependency>
+            <groupId>com.fillumina</groupId>
+            <artifactId>krasa-jaxb-tools</artifactId>
+            <version>${krasa-jaxb-tools.version}</version>
+          </dependency>
+        </dependencies>
         <executions>
           <execution>
+            <id>xjc-schema-a</id>
             <goals>
               <goal>generate</goal>
             </goals>
             <configuration>
-              <schemaLanguage>wsdl</schemaLanguage>
-              <schemaDirectory>${project.parent.basedir}/wsdl</schemaDirectory>
-              <schemaIncludes>
-                <include>Hello.wsdl</include>
-              </schemaIncludes>
-              <extension>true</extension>
+              <schemaDirectory>${project.parent.basedir}/schema</schemaDirectory>
+              <bindingDirectory>${project.parent.basedir}/schema</bindingDirectory>
+              <bindingIncludes>binding2.xml</bindingIncludes>
+              <!--<schemaIncludes>a.xsd</schemaIncludes>-->
+              <packageName>b</packageName>
               <args>
-                <arg>-wsdl</arg>
-                <!--<arg>-verbose</arg>-->
-                <arg>-no-header</arg>
                 <arg>-XJsr303Annotations</arg>
-                <arg>-XJsr303Annotations:targetNamespace=a</arg>
-                <arg>-XhashCode</arg>
-                <arg>-Xequals</arg>
+                <arg>-XJsr303Annotations:verbose=false</arg>
+                <arg>-XJsr303Annotations:validationAnnotations=javax</arg>
+                <arg>-XJsr303Annotations:generateNotNullAnnotations=true</arg>
               </args>
               <plugins>
                 <plugin>
                   <groupId>com.fillumina</groupId>
                   <artifactId>krasa-jaxb-tools</artifactId>
-                  <version>2.4-SNAPSHOT</version>
+                  <version>${krasa-jaxb-tools.version}</version>
                 </plugin>
                 <plugin>
                   <groupId>org.jvnet.jaxb2_commons</groupId>
@@ -101,15 +109,7 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.13.0</version>
-        <configuration>
-          <source>21</source>
-          <target>21</target>
-        </configuration>
-      </plugin>
+
     </plugins>
 
   </build>
