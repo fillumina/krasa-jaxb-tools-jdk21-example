@@ -38,3 +38,5 @@
 /krasa-jaxb2-maven-plugin-jakarta-jdk21-example/target/
 /krasa-jaxb-maven-plugin-javax-jdk21-example/target/
 /krasa-jaxb-maven-plugin-jakarta-jdk21-example/target/
+/krasa-jaxws-maven-plugin-javax-jdk21-example/target/
+/krasa-jaxws-maven-plugin-jakarta-jdk21-example/target/

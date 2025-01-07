@@ -22,6 +22,8 @@
     <module>krasa-jaxb2-maven-plugin-jakarta-jdk21-example</module>
     <module>krasa-jaxb-maven-plugin-javax-jdk21-example</module>
     <module>krasa-jaxb-maven-plugin-jakarta-jdk21-example</module>
+    <module>krasa-jaxws-maven-plugin-javax-jdk21-example</module>
+    <module>krasa-jaxws-maven-plugin-jakarta-jdk21-example</module>
   </modules>
 
   <properties>
