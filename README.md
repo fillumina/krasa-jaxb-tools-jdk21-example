@@ -17,11 +17,11 @@ Tests are performed with these plugins:
 
 ## TODO
 
- - Set JDK 21 constraint on parent pom
- - change package names
- - comment on dependencies
- - check for unused dependencies
  - add meaningful README
  - centralize krasa-jaxb version on parent (to easy ceck for different krasa versions)
  - add jaxws-maven-plugin
  - add test to check that packages a and b were both generated with the right classes
+
+ migration guide: https://github.com/highsource/jaxb-tools/wiki/JAXB-Tools-Migration-Guide
+
+ https://github.com/highsource/jaxb-tools#jaxb-maven-plugin
