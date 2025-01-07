@@ -16,7 +16,7 @@
     <dependency>
       <groupId>com.fillumina</groupId>
       <artifactId>krasa-test-helper-javax-jdk21</artifactId>
-      <version>2.4-SNAPSHOT</version>
+      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
 
@@ -89,7 +89,7 @@
                 <plugin>
                   <groupId>com.fillumina</groupId>
                   <artifactId>krasa-jaxb-tools</artifactId>
-                  <version>2.4-SNAPSHOT</version>
+                  <version>${krasa-jaxb-tools.version}</version>
                 </plugin>
                 <plugin>
                   <groupId>org.jvnet.jaxb2_commons</groupId>

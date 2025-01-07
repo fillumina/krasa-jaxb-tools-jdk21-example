@@ -14,7 +14,7 @@
     <dependency>
       <groupId>com.fillumina</groupId>
       <artifactId>krasa-test-helper-javax-jdk21</artifactId>
-      <version>2.4-SNAPSHOT</version>
+      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
 
@@ -64,7 +64,7 @@
           <dependency>
             <groupId>com.fillumina</groupId>
             <artifactId>krasa-jaxb-tools</artifactId>
-            <version>2.4-SNAPSHOT</version>
+            <version>${krasa-jaxb-tools.version}</version>
           </dependency>
         </dependencies>
         <executions>
@@ -88,7 +88,7 @@
                 <plugin>
                   <groupId>com.fillumina</groupId>
                   <artifactId>krasa-jaxb-tools</artifactId>
-                  <version>2.4-SNAPSHOT</version>
+                  <version>${krasa-jaxb-tools.version}</version>
                 </plugin>
                 <plugin>
                   <groupId>org.jvnet.jaxb2_commons</groupId>
@@ -123,7 +123,7 @@
                 <plugin>
                   <groupId>com.fillumina</groupId>
                   <artifactId>krasa-jaxb-tools</artifactId>
-                  <version>2.4-SNAPSHOT</version>
+                  <version>${krasa-jaxb-tools.version}</version>
                 </plugin>
                 <plugin>
                   <groupId>org.jvnet.jaxb2_commons</groupId>
@@ -139,5 +139,4 @@
     </plugins>
 
   </build>
-    <name>krasa-jaxb2-maven-plugin-javax-jdk21-example</name>
 </project>

@@ -17,7 +17,7 @@
     <dependency>
       <groupId>com.fillumina</groupId>
       <artifactId>krasa-test-helper-javax-jdk21</artifactId>
-      <version>2.4-SNAPSHOT</version>
+      <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
 
@@ -41,12 +41,6 @@
       <artifactId>validation-api</artifactId>
       <version>2.0.1.Final</version>
     </dependency>
-    <dependency>
-      <groupId>org.jvnet.jaxb2_commons</groupId>
-      <artifactId>jaxb2-basics-runtime</artifactId>
-      <version>1.11.1</version>
-    </dependency>
-
 
     <dependency>
       <groupId>jakarta.validation</groupId>
@@ -58,16 +52,6 @@
       <artifactId>hibernate-validator</artifactId>
       <!-- last version compatible with javax see: https://hibernate.org/validator/releases/ -->
       <version>6.2.5.Final</version>
-    </dependency>
-    <dependency>
-      <groupId>jakarta.xml.bind</groupId>
-      <artifactId>jakarta.xml.bind-api</artifactId>
-      <version>4.0.2</version>
-    </dependency>
-    <dependency>
-      <groupId>org.glassfish</groupId>
-      <artifactId>jakarta.el</artifactId>
-      <version>4.0.1</version>
     </dependency>
     <dependency>
       <groupId>jakarta.jws</groupId>
@@ -104,11 +88,8 @@
                   <wsdl>${project.parent.basedir}/wsdl/Hello.wsdl</wsdl>
                   <extraargs>
                     <extraarg>-verbose</extraarg>
-                    <!-- enable the ValidSEIGenerator -->
                     <extraarg>-frontend</extraarg>
                     <extraarg>krasa</extraarg>
-                    <!--                    <extraarg>-b</extraarg>
-                    <extraarg>${project.parent.basedir}/wsdl/jaxws-Hello.xml</extraarg>-->
                     <extraarg>-xjc-XJsr303Annotations:verbose=true</extraarg>
                     <extraarg>-xjc-XReplacePrimitives</extraarg>
                     <!--<extraarg>-xjc-XhashCode</extraarg>
@@ -129,15 +110,10 @@
           </execution>
         </executions>
         <dependencies>
-          <!--          <dependency>
-            <groupId>org.jvnet.jaxb2_commons</groupId>
-            <artifactId>jaxb2-basics</artifactId>
-            <version>1.11.1</version>
-          </dependency>-->
           <dependency>
             <groupId>com.fillumina</groupId>
             <artifactId>krasa-jaxb-tools</artifactId>
-            <version>2.4-SNAPSHOT</version>
+            <version>${krasa-jaxb-tools.version}</version>
           </dependency>
         </dependencies>
       </plugin>
