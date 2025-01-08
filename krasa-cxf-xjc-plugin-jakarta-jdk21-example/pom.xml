@@ -113,11 +113,13 @@
           </xsdOptions>
         </configuration>
         <dependencies>
+          <!-- provides, between others, equals and hashcode generation -->
           <dependency>
             <groupId>org.jvnet.jaxb2_commons</groupId>
             <artifactId>jaxb2-basics</artifactId>
             <version>1.11.1</version>
           </dependency>
+          <!-- provides validation -->
           <dependency>
             <groupId>com.fillumina</groupId>
             <artifactId>krasa-jaxb-tools</artifactId>

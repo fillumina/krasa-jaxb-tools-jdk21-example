@@ -35,10 +35,26 @@
       <version>4.0.1</version>
     </dependency>
 
-
     <dependency>
       <groupId>javax.xml.bind</groupId>
       <artifactId>jaxb-api</artifactId>
+      <version>2.3.1</version>
+    </dependency>
+
+    <!--needed by org.jvnet.jaxb2_commons:jaxb2-basics:0.13.1 -->
+    <dependency>
+      <groupId>org.jvnet.jaxb2_commons</groupId>
+      <artifactId>jaxb2-basics</artifactId>
+      <version>0.13.1</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.xml.bind</groupId>
+      <artifactId>jaxb-api</artifactId>
+      <version>2.3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.xml.bind</groupId>
+      <artifactId>jaxb-impl</artifactId>
       <version>2.3.1</version>
     </dependency>
 
@@ -78,6 +94,8 @@
               <!--<schemaIncludes>a.xsd</schemaIncludes>-->
               <packageName>b</packageName>
               <args>
+                <arg>-XhashCode</arg>
+                <arg>-Xequals</arg>
                 <arg>-XJsr303Annotations</arg>
                 <arg>-XJsr303Annotations:verbose=false</arg>
                 <arg>-XJsr303Annotations:validationAnnotations=jakarta</arg>
@@ -92,7 +110,7 @@
                 <plugin>
                   <groupId>org.jvnet.jaxb2_commons</groupId>
                   <artifactId>jaxb2-basics</artifactId>
-                  <version>1.11.1</version>
+                  <version>0.13.1</version>
                 </plugin>
               </plugins>
             </configuration>

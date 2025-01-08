@@ -41,6 +41,23 @@
       <version>2.3.1</version>
     </dependency>
 
+    <!--needed by org.jvnet.jaxb2_commons:jaxb2-basics:0.13.1 -->
+    <dependency>
+      <groupId>org.jvnet.jaxb2_commons</groupId>
+      <artifactId>jaxb2-basics</artifactId>
+      <version>0.13.1</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.xml.bind</groupId>
+      <artifactId>jaxb-api</artifactId>
+      <version>2.3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.xml.bind</groupId>
+      <artifactId>jaxb-impl</artifactId>
+      <version>2.3.1</version>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -79,6 +96,8 @@
               </sources>
               <packageName>a</packageName>
               <arguments>
+                <argument>-XhashCode</argument>
+                <argument>-Xequals</argument>
                 <argument>-XJsr303Annotations</argument>
                 <argument>-XJsr303Annotations:verbose=false</argument>
                 <argument>-XJsr303Annotations:validationAnnotations=javax</argument>
@@ -93,7 +112,7 @@
                 <plugin>
                   <groupId>org.jvnet.jaxb2_commons</groupId>
                   <artifactId>jaxb2-basics</artifactId>
-                  <version>1.11.1</version>
+                  <version>0.13.1</version>
                 </plugin>
               </plugins>
             </configuration>
