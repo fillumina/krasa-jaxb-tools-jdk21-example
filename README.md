@@ -24,30 +24,29 @@ This is a fork of [GitHub - fillumina/krasa-jaxb-tools-example](https://github.c
 In the table the **package** column refers to the packages used in the generated classes:
 
 - **jakarta** when both validation and XML bind annotations use the `jakarta` prefix, ie:
-  
+
   ```java
   import jakarta.validation.Valid;
   import jakarta.xml.bind.annotation.XmlAccessType;
   ```
 
 - **javax** when both validation and XML bind annotations use the `javax` prefix, ie:
-  
+
   ```java
   import javax.validation.Valid;
   import javax.xml.bind.annotation.XmlAccessType;
   ```
 
 - **mixed** when validation annotations produced by `krasa-jaxb-tools` use the `jakarta` package while XML bind annotations produced by the XJC plugin use `javax` package, ie:
-  
+
   ```java
   import javax.xml.bind.annotation.XmlType;
   import jakarta.validation.Valid;
   ```
 
-Having a mixed packages is usually undesirable but might be needed because of other constraints. When the project has to work with older packages that supports `javax` just prefer that, otherwise migrate to the new packages `jakarta` which is supported by the newest and better projects.
+Having a mixed packages is usually undesirable but might be needed because of other constraints. When the project has to work with older packages that support `javax` just prefer that, otherwise migrate to the new `jakarta` packages which are supported by the newest and better projects.
 
 ## Migration from `javax` to `jakarta`
 
-- Migration guide: https://github.com/highsource/jaxb-tools/wiki/JAXB-Tools-Migration-Guide 
-  
-  
+- Migration guide: https://github.com/highsource/jaxb-tools/wiki/JAXB-Tools-Migration-Guide
+
