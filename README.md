@@ -1,14 +1,14 @@
 # Tests for the `krasa-jaxb-tools` project using JDK 21
 
-Provides functional tests together with a showcase on how to invoke  [Jaxn Bean Validation Annotation Plugin `krasa-jaxb-tools`](https://github.com/fillumina/krasa-jaxb-tools)  using **JDK 21**.
+Provides functional tests together with a showcase on how to invoke  [JAXB Bean Validation Annotation Plugin `krasa-jaxb-tools`](https://github.com/fillumina/krasa-jaxb-tools)  using **JDK 21**.
 
-This is a fork of [GitHub - fillumina/krasa-jaxb-tools-example](https://github.com/fillumina/krasa-jaxb-tools-example) with many more different projects and compiled with JDK 21 rather than JDK 8.
+This is a fork of [fillumina/krasa-jaxb-tools-example](https://github.com/fillumina/krasa-jaxb-tools-example) with more projects and compiled with JDK 21 rather than JDK 8.
 
 ## Projects
 
 | Project Name                                                                                                                                                             | Package   | Source |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ------ |
-| [krasa-cxf-codegen-plugin-javax-jdk21-example](https://github.com/fillumina/krasa-jaxb-tools-jdk21-example/tree/master/krasa-cxf-codegen-plugin-jakarta-jdk21-example)   | javax     | wsdl   |
+| [krasa-cxf-codegen-plugin-javax-jdk21-example](https://github.com/fillumina/krasa-jaxb-tools-jdk21-example/tree/master/krasa-cxf-codegen-plugin-javax-jdk21-example)     | javax     | wsdl   |
 | [krasa-cxf-codegen-plugin-jakarta-jdk21-example](https://github.com/fillumina/krasa-jaxb-tools-jdk21-example/tree/master/krasa-cxf-codegen-plugin-jakarta-jdk21-example) | jakarta   | wsdl   |
 | [krasa-cxf-xjc-plugin-javax-jdk21-example](https://github.com/fillumina/krasa-jaxb-tools-jdk21-example/tree/master/krasa-cxf-xjc-plugin-javax-jdk21-example)             | javax     | xsd    |
 | [krasa-cxf-xjc-plugin-jakarta-jdk21-example](https://github.com/fillumina/krasa-jaxb-tools-jdk21-example/tree/master/krasa-cxf-xjc-plugin-jakarta-jdk21-example)         | jakarta   | xsd    |
@@ -24,21 +24,21 @@ This is a fork of [GitHub - fillumina/krasa-jaxb-tools-example](https://github.c
 In the table the **package** column refers to the packages used in the generated classes:
 
 - **jakarta** when both validation and XML bind annotations use the `jakarta` prefix, ie:
-
+  
   ```java
   import jakarta.validation.Valid;
   import jakarta.xml.bind.annotation.XmlAccessType;
   ```
 
 - **javax** when both validation and XML bind annotations use the `javax` prefix, ie:
-
+  
   ```java
   import javax.validation.Valid;
   import javax.xml.bind.annotation.XmlAccessType;
   ```
 
 - **mixed** when validation annotations produced by `krasa-jaxb-tools` use the `jakarta` package while XML bind annotations produced by the XJC plugin use `javax` package, ie:
-
+  
   ```java
   import javax.xml.bind.annotation.XmlType;
   import jakarta.validation.Valid;
@@ -49,4 +49,3 @@ Having a mixed packages is usually undesirable but might be needed because of ot
 ## Migration from `javax` to `jakarta`
 
 - Migration guide: https://github.com/highsource/jaxb-tools/wiki/JAXB-Tools-Migration-Guide
-
