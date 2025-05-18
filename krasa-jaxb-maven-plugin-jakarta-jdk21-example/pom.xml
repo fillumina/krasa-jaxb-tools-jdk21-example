@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.fillumina</groupId>
     <artifactId>krasa-jaxb-tools-jdk21-example</artifactId>
-    <version>2.4-SNAPSHOT</version>
+    <version>2.5-SNAPSHOT</version>
   </parent>
 
   <artifactId>krasa-jaxb-maven-plugin-jakarta-jdk21-example</artifactId>
