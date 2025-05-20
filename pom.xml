@@ -6,7 +6,7 @@
 
   <groupId>com.fillumina</groupId>
   <artifactId>krasa-jaxb-tools-jdk21-example</artifactId>
-  <version>2.5-SNAPSHOT</version>
+  <version>2.6-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -28,7 +28,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <krasa-jaxb-tools.version>2.5-SNAPSHOT</krasa-jaxb-tools.version>
+    <krasa-jaxb-tools.version>2.6-SNAPSHOT</krasa-jaxb-tools.version>
   </properties>
 
   <!-- TODO inssert check for JDK 21 here -->
